@@ -1,0 +1,7 @@
+name: job_application_agent
+description: >
+  Agent that summarizes job listings and generates personalized proposals using user input and CV.
+
+tools:
+  - tools.job_summarizer:JobSummarizerTool
+  - tools.proposal_writer:ProposalWriterTool
