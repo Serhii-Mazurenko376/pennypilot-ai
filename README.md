@@ -1,71 +1,41 @@
-<p align="center">
-  <img src="./assets/banner.png" alt="PennyPilot Banner" width="600"/>
-</p>
-# 🧠 PennyPilot AI
+## 📌 Project Overview
 
-**PennyPilot** is a lightweight AI assistant that helps job seekers streamline their applications. It can summarize job listings and generate personalized proposals using your CV — ideal for freelancers and professionals navigating online job boards.
+**PennyPilot** is a lightweight AI assistant designed to help job seekers and freelancers accelerate job applications. It provides two main capabilities:
 
----
+- 📝 **Job Summarizer**: Extracts key details from job listings
+- 📬 **Proposal Generator**: Generates personalized application letters based on the user’s CV
 
-## 🚀 Features
-
-- ✅ Summarize long job descriptions into key points
-- ✅ Generate custom job proposals from your resume
-- ✅ Built for local use or agent-based environments (AgentOS-compatible)
+This project is fully functional without an OpenAI key or API integration, using logic-based tool classes for easy testing and reuse.
 
 ---
 
-## 🗂️ Project Structure
+## ⚙️ Features
 
-```
-pennypilot-ai/
-├── agent_config/ # Agent definition YAML
-├── data/ # Sample inputs
-├── tools/ # Core tools (summarizer, proposal writer)
-├── utils/ # Helper functions
-├── run_tools.py # Test script to run tools locally
-├── requirements.txt # Python dependencies
-└── README.md # This file
-```
+- Runs locally with `run_tools.py` or `Streamlit` UI
+- Agent-compatible via `agent.yaml`
+- Plug-and-play structure for later LLM integration (OpenAI, Ollama)
+- Built in Python with beginner-friendly architecture
 
 ---
 
-## ⚙️ How to Use
+## 💡 Example Use Case
 
-### 1. Clone this repository
-```bash
-git clone https://github.com/Serhii-Mazurenko376/pennypilot-ai.git
-cd pennypilot-ai
-```
-### 2. Set up environment
-```
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-### 3. Run the tools locally
-```
-python run_tools.py
-```
-## 📌 Example Output
-```
-📝 Running JobSummarizerTool...
-Summary:
-We are seeking a detail-oriented Python developer with experience in REST APIs, data processing...
+Paste a job description and your resume, and PennyPilot returns:
+- A short summary of the job (useful for filtering)
+- A tailored application draft (saves time!)
 
-✉️ Running ProposalWriterTool...
-Dear Hiring Manager,
-...
-```
-## 📦 Integrations
+---
 
-Compatible with LangChain agent formats via agent_config/agent.yaml
-Easy to plug into AgentOS or other orchestrators
+## 📂 Files
 
-## 🪪 License
+- `tools/job_summarizer.py`: Summarizes job descriptions
+- `tools/proposal_writer.py`: Generates proposals from input
+- `agent_config/agent.yaml`: Defines the tools
+- `run_tools.py`: Local test runner
+- `app.py`: Streamlit UI (optional)
 
-MIT License. Feel free to reuse or extend.
-## ✨ Credits
+---
 
-Created by Serhii Mazurenko  
-Powered by OpenAI, Python, and motivation ☕️
+## 📸 Banner
+
+![PennyPilot Banner](assets/banner.png)
